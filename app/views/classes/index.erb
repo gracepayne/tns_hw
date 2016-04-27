@@ -1,0 +1,16 @@
+<h1> Classes </h1>
+
+
+<% @Klasses.each_with_index do |k, idx| %>
+<p>
+	<%= idx + 1 %>.
+	<%= k.name %>
+	&nbsp
+	<%= k.instructor %>
+	&nbsp
+	<%= k.grade %>
+</p>
+<% end %>
+
+
+ 
