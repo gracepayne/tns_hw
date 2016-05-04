@@ -11,8 +11,12 @@ class ClassesController < ApplicationController
 		@klass.name = params["name"]
 		@klass.instructor = params["instructor"]
 		@klass.grade = params["grade"]
+		@klass.current_assignment = params["current_assignment"]
 		@klass.save!
 		redirect_to action: :index
+	end
+
+	def edit
 	end
 end
 

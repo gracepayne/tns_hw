@@ -1,16 +1,36 @@
 <h1> Classes </h1>
 
-
-<% @Klasses.each_with_index do |k, idx| %>
-<p>
-	<%= idx + 1 %>.
-	<%= k.name %>
-	&nbsp
-	<%= k.instructor %>
-	&nbsp
-	<%= k.grade %>
-</p>
-<% end %>
+<%= link_to "New Class", "/classes/new" %>
 
 
- 
+
+
+<table border="1" id="TheHenry">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Class Name</th>
+			<th>Instructor</th>
+			<th>Grade</th>
+			<th>Current Assignment</th>
+			<th></th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<% @Klasses.each_with_index do |k, idx| %>
+			<tr>
+				<td> <%= idx + 1 %> </td>
+				<td> <%= k.name %> </td>
+				<td> <%= k.instructor %> </td>
+				<td> <%= k.grade %> </td>
+				<td> <%= k.current_assignment %> </td>
+				<td> edit </td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+
+
+
